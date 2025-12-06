@@ -43,6 +43,15 @@ h1 {
     cursor: pointer;
     font-weight: bold;
 }
+#lookup-cities {
+    padding: 10px 20px;
+    background-color: #a97c50; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
 
 #lookup:hover {
     background-color: #875e3f; 
@@ -71,4 +80,12 @@ th, td {
 /* Styles table header row */
 th {
     background-color: #f2f2f2;
+}
+
+#lookup-cities:hover {
+    background-color: #875e3f; 
+}
+
+#lookup-cities:active {
+    background-color: #6b452e; 
 }
