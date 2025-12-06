@@ -1,17 +1,57 @@
-<?php
-$host = 'localhost';
-$username = 'lab5_user';
-$password = '';
-$dbname = 'world';
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
-$conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-$stmt = $conn->query("SELECT * FROM countries");
+header {
+    background-color: #d8b675;
+    color: white;
+    padding: 50px;
+}
 
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+header img.logo {
+    width: 100px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border-radius: 30px
 
-?>
-<ul>
-<?php foreach ($results as $row): ?>
-  <li><?= $row['name'] . ' is ruled by ' . $row['head_of_state']; ?></li>
-<?php endforeach; ?>
-</ul>
+}
+
+h1 {
+    display: inline;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.search-container {
+    margin: 20px;
+}
+
+#country {
+    padding: 8px;
+    width: 200px;
+}
+
+#lookup {
+    padding: 10px 20px;
+    background-color: #a97c50; /* darker brown for contrast */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#lookup:hover {
+    background-color: #875e3f; /* slightly darker on hover */
+}
+
+#lookup:active {
+    background-color: #6b452e; /* pressed effect */
+}
+
+#result {
+    margin-top: 20px;
+}
