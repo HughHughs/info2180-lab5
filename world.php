@@ -8,12 +8,12 @@ $dbname = 'world';
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 
-    //Get country and lookup type from URL if provided
+    //gets country and lookup type from url
     $country = isset($_GET['country']) ? $_GET['country'] : '';
     $lookup  = isset($_GET['lookup']) ? $_GET['lookup'] : '';
 
     if ($lookup === "cities") {
-        //Search for cities in the specified country
+        //searches for cities in the specified country
         $stmt = $conn->prepare("
             SELECT cities.name AS city_name, cities.district, cities.population
             FROM cities
@@ -25,7 +25,7 @@ try {
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
     } else {
         if (!empty($country)) {
-            //Search for countries matching the input
+            //Searches for countries matching the input
             $stmt = $conn->prepare("SELECT * FROM countries WHERE name LIKE :country");
             $stmt->bindValue(':country', "%$country%");
             $stmt->execute();
