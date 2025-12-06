@@ -36,7 +36,7 @@ h1 {
 
 #lookup {
     padding: 10px 20px;
-    background-color: #a97c50; /* darker brown for contrast */
+    background-color: #a97c50; 
     color: white;
     border: none;
     border-radius: 8px;
@@ -45,13 +45,30 @@ h1 {
 }
 
 #lookup:hover {
-    background-color: #875e3f; /* slightly darker on hover */
+    background-color: #875e3f; 
 }
 
 #lookup:active {
-    background-color: #6b452e; /* pressed effect */
+    background-color: #6b452e; 
 }
 
 #result {
     margin-top: 20px;
+}
+/* centers the table horizontally */
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px 12px;
+    text-align: center; /* center text inside cells */
+}
+
+/* Styles table header row */
+th {
+    background-color: #f2f2f2;
 }
